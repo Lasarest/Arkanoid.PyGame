@@ -88,9 +88,9 @@ while not game_over:
             if event.key == pygame.K_LEFT:
                 move_left = False
 
-    if move_right:
+    if move_right and platform.rect.x < 400:
         platform.rect.x += 3
-    if move_left:
+    if move_left and platform.rect.x > 0:
         platform.rect.x -= 3
     ball.rect.x += dx
     ball.rect.y += dy
